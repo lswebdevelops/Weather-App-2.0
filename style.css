@@ -270,6 +270,17 @@ img {
   text-align: left;
 }
  
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #f6f6f8;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 
 /********** Small devices only **********/
@@ -348,3 +359,4 @@ img {
     max-width:250px;
   }
 }
+
