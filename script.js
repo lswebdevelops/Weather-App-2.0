@@ -124,8 +124,9 @@ async function getWeatherData(city, unit, hourlyorWeek) {
       } else {
         updateForecast(data.days, unit, "week");
       }
-      sunRise.textContent = covertTimeTo12HourFormat(today.sunrise);
-      sunSet.textContent = covertTimeTo12HourFormat(today.sunset);
+      sunRise.textContent = (today.sunrise);
+      
+      sunSet.textContent = (today.sunset);
 	  
     } catch (err) {
       console.log("City not found in our database");
@@ -302,17 +303,17 @@ function updateVisibiltyStatus(visibility) {
 // function to get air quality status
 function updateAirQualityStatus(airquality) {
   if (airquality <= 50) {
-    airQualityStatus.textContent = "Good👌";
+    airQualityStatus.textContent = "Good";
   } else if (airquality <= 100) {
-    airQualityStatus.textContent = "Moderate😐";
+    airQualityStatus.textContent = "Moderate";
   } else if (airquality <= 150) {
-    airQualityStatus.textContent = "Unhealthy for Sensitive Groups😷";
+    airQualityStatus.textContent = "Unhealthy for Sensitive Groups";
   } else if (airquality <= 200) {
-    airQualityStatus.textContent = "Unhealthy😷";
+    airQualityStatus.textContent = "Unhealthy";
   } else if (airquality <= 250) {
-    airQualityStatus.textContent = "Very Unhealthy😨";
+    airQualityStatus.textContent = "Very Unhealthy";
   } else {
-    airQualityStatus.textContent = "Hazardous😱";
+    airQualityStatus.textContent = "Hazardous";
   }
 }
 
