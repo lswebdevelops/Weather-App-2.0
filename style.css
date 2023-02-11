@@ -17,7 +17,6 @@ body {
   justify-content: center;
   min-height: 100vh;
 
-  padding: 50px;
   background: var(--primary-color);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./images/cd.jpg");
@@ -281,7 +280,10 @@ img {
     align-items: center;
     justify-content: space-between;
 }
-
+body{
+  
+  padding: 50px;
+ }
 
 /********** Small devices only **********/
 @media (min-width: 675px) and (max-width: 826px) {
@@ -291,7 +293,10 @@ img {
     .main{
         width: 60%;
     }
- 
+ body{
+  
+  padding: 40px;
+ }
 }
 /********** Extra small devices only **********/
 @media (max-width: 675px) {
@@ -345,6 +350,10 @@ img {
   
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
 @media (max-width: 479px) {
+  body{
+  
+    padding: 5px;
+   }
   .date-time{
     display: none;
   }
@@ -357,6 +366,11 @@ img {
     width: 100%;
     min-width: 150px;
     max-width:250px;
+  }
+  body {
+    
+    background-image: none;
+    
   }
 }
 
