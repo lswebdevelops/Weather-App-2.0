@@ -1,5 +1,6 @@
 
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*  SINGLE CATEGORY PAGE */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 :root {
   --primary-color: #5598fd;
@@ -15,7 +16,7 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  
+
   padding: 50px;
   background: var(--primary-color);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -29,10 +30,12 @@ img {
 }
 .wrapper {
   display: flex;
+  width: 1200px;
     border-radius: 20px;
   overflow: hidden;
 }
 .sidebar {
+  width: 30%;
   
   padding: 20px;
   background: rgba(255, 255, 255, 0.815);
@@ -64,7 +67,7 @@ img {
   border: 1px solid var(--primary-color);
 }
 .search button {
-
+  min-width: 40px;
   height: 40px;
   border: none;
   border-top-right-radius: 5px;
@@ -152,7 +155,7 @@ img {
 }
 .main {
   width: 100%;
- 
+  
   padding: 20px 40px;
   background-color: #f6f6f8;
   position: relative;
@@ -274,125 +277,38 @@ img {
   left: 50%;
   transform: translateX(-50%);
 } 
- 
 
-/********** Extra small devices only **********/
-@media (max-width: 978px) {
- 
- .wrapper{
-  width: 100%;
-  display: grid;
- }
- 
+
+/********** Small devices only **********/
+@media (min-width: 675px) and (max-width: 826px) {
   .sidebar{
-  display: grid;
-  grid-template-columns: 1fr;
- 
- }
-  .one{
-    display: inline-grid;
-    grid-template: repeat(8,50px)/  repeat(8,100px);
-    grid-auto-rows: 40px;
- 
+    width: 40%;
   }
- .search{
-   grid-column-start: 1;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  }
-  .weather-icon{
- 
-    grid-column-start: 1;
-    grid-column-end: 3;
-   
+    .main{
+        width: 60%;
     }
-    .temperature{
  
-      grid-column-start: 6;
-      grid-column-end: 9;
-      grid-row-start: 3;
-      grid-row-end: 5;
-      }
-  
-    .condition-rain{
-       grid-column-start: 6;
-        grid-column-end: 8;
-        grid-row-start: 5;
-        grid-row-end: 8;
-        font-size: 1rem;
-        }
-   
-        .date-time{
-          grid-column-start: 1;
-           grid-column-end: 3;
-           grid-row-start: 8;
-           grid-row-end: 9;
-           font-size: 1rem;
-           }
-
 }
-  /********** Medium devices only **********/
-@media (min-width:850px) and (max-width: 931px) {
-  nav{
-    max-width: 85%;
-  }
+/********** Extra small devices only **********/
+@media (max-width: 675px) {
+
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sidebar{
+        width: 100%;
+      }
+      .main{
+          width: 100%;
+        }
+        .main .cards{
+            justify-content: center;
+        }
+     
 }
-  /********** Medium devices only **********/
-  @media (min-width:680px) and (max-width: 850px) {
-    nav{
-      max-width: 60%;
-    }
-    .cards{
-      max-width: 70%;
-
-    }
-    .temperature{
- 
-      grid-column-start: 4;
-      grid-column-end: 7;
-      grid-row-start: 3;
-      grid-row-end: 5;
-      }
   
-    .condition-rain{
-       grid-column-start: 4;
-        grid-column-end: 7;
-        grid-row-start: 5;
-        grid-row-end: 8;
-        font-size: 1rem;
-        }
-   
-
-  }
-
-   /********** Medium devices only **********/
-   @media (min-width:380px) and (max-width: 680px) {
-    .search{
-      max-width:55%;
-    }
-
-    .temperature{
- 
-      grid-column-start: 2;
-      grid-column-end: 4;
-      grid-row-start: 3;
-      grid-row-end: 5;
-      }
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
   
-    .condition-rain{
-       grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 6;
-        grid-row-end: 8;
-        font-size: 1rem;
-        }
-        nav{
-          max-width: 45%;
-        }
-        .cards{
-          max-width: 60%;
-    
-        }
-   
-   }
+}
